@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Industry</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <style>
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 60px));
+            margin: auto;
+        }
+
+
+
+        header {
+            width: 100%;
+            height: 100px;
+            background: #fff;
+        }
+
+        .header-content {
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            text-decoration: none;
+
+            color: #111c38;
+
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .logo i {
+            color: #ffb900;
+            font-size: 43px;
+        }
+
+        .menu {
+            border: none;
+            background: transparent;
+
+            font-size: 30px;
+
+            cursor: pointer;
+
+            color: #111;
+        }
+
+
+
+
+        .hero {
+            min-height: 900px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            text-align: center;
+
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    rgba(8, 15, 30, .68),
+                    rgba(8, 15, 30, .68)
+                ),
+                url("https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1800&q=85");
+
+            background-position: center;
+            background-size: cover;
+        }
+
+        .hero-content {
+            padding: 80px 0;
+        }
+
+        .hero-small-title {
+            font-size: 20px;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 35px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 7vw, 92px);
+
+            line-height: 1.05;
+
+            font-weight: 800;
+
+            margin-bottom: 45px;
+        }
+
+        .hero p.description {
+            max-width: 900px;
+
+            margin: auto;
+            margin-bottom: 42px;
+
+            font-size: 21px;
+
+            line-height: 1.8;
+        }
+
+
+
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 290px;
+            min-height: 80px;
+
+            padding: 20px 35px;
+
+            background: #ffb900;
+
+            color: #fff;
+
+            text-decoration: none;
+
+            border: none;
+
+            font-size: 19px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #e6a500;
+
+            transform: translateY(-3px);
+        }
+
+
+
+
+        .services {
+            padding: 135px 0 150px;
+
+            background: #fff;
+        }
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 75px;
+        }
+
+        .service {
+            text-align: center;
+        }
+
+        .service-icon {
+            width: 135px;
+            height: 135px;
+
+            margin: auto;
+            margin-bottom: 60px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            color: #aaa;
+
+            font-size: 42px;
+
+            border: 2px solid #bbb;
+
+            clip-path:
+                polygon(
+                    50% 0,
+                    93% 25%,
+                    93% 75%,
+                    50% 100%,
+                    7% 75%,
+                    7% 25%
+                );
+        }
+
+        .service h2 {
+            font-size: 32px;
+
+            margin-bottom: 30px;
+
+            line-height: 1.25;
+        }
+
+        .service p {
+            color: #888;
+
+            font-size: 18px;
+
+            line-height: 1.9;
+        }
+
+
+
+
+        .about {
+            background: #f7f7fd;
+
+            padding: 140px 0;
+        }
+
+        .about-small {
+            color: #ffb900;
+
+            font-size: 21px;
+
+            margin-bottom: 28px;
+        }
+
+        .about h2 {
+            font-size: clamp(50px, 6vw, 80px);
+
+            line-height: 1.1;
+
+            font-weight: 800;
+
+            margin-bottom: 55px;
+        }
+
+        .about h3 {
+            font-size: 23px;
+
+            font-weight: 500;
+
+            margin-bottom: 20px;
+        }
+
+        .about p.description {
+            max-width: 1050px;
+
+            color: #888;
+
+            font-size: 19px;
+
+            line-height: 1.85;
+
+            margin-bottom: 55px;
+        }
+
+
+
+
+        .quote {
+            min-height: 820px;
+
+            position: relative;
+
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    rgba(30, 17, 5, .75),
+                    rgba(30, 17, 5, .75)
+                ),
+                url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1800&q=85");
+
+            background-position: center;
+            background-size: cover;
+        }
+
+        .quote-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 1050px;
+
+            padding: 70px 0 90px;
+        }
+
+        .quote h2 {
+            font-size: 40px;
+
+            margin-bottom: 40px;
+        }
+
+        form {
+            display: grid;
+
+            gap: 12px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            padding: 20px 24px;
+
+            background: rgba(0, 0, 0, .15);
+
+            border: 2px solid rgba(255, 255, 255, .8);
+
+            outline: none;
+
+            color: #fff;
+
+            font-family: inherit;
+
+            font-size: 18px;
+
+            border-radius: 0;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #fff;
+        }
+
+        select {
+            color: #fff;
+        }
+
+        select option {
+            color: #222;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #ffb900;
+        }
+
+        textarea {
+            height: 250px;
+
+            resize: vertical;
+        }
+
+        form .btn {
+            width: 100%;
+        }
+
+
+
+
+
+        @media (max-width: 850px) {
+
+            .container {
+                width: calc(100% - 50px);
+            }
+
+            .hero {
+                min-height: 850px;
+            }
+
+            .hero-small-title {
+                font-size: 15px;
+
+                letter-spacing: 3px;
+            }
+
+            .hero h1 {
+                font-size: 58px;
+            }
+
+            .hero p.description {
+                font-size: 18px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+
+                gap: 100px;
+            }
+
+            .service p {
+                font-size: 18px;
+            }
+
+            .about h2 {
+                font-size: 55px;
+            }
+
+        }
+
+
+
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: calc(100% - 40px);
+            }
+
+            header {
+                height: 85px;
+            }
+
+            .logo {
+                font-size: 27px;
+            }
+
+            .logo i {
+                font-size: 35px;
+            }
+
+            .menu {
+                font-size: 27px;
+            }
+
+
+            .hero {
+                min-height: 820px;
+            }
+
+            .hero-content {
+                padding: 50px 0;
+            }
+
+            .hero-small-title {
+                font-size: 12px;
+
+                letter-spacing: 2px;
+
+                margin-bottom: 25px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+
+                margin-bottom: 30px;
+            }
+
+            .hero p.description {
+                font-size: 16px;
+
+                line-height: 1.75;
+
+                margin-bottom: 35px;
+            }
+
+
+            .btn {
+                width: 100%;
+
+                min-width: 0;
+
+                min-height: 75px;
+
+                font-size: 17px;
+            }
+
+
+            .services {
+                padding: 90px 0;
+            }
+
+            .service-icon {
+                width: 120px;
+                height: 120px;
+
+                margin-bottom: 45px;
+            }
+
+            .service h2 {
+                font-size: 29px;
+            }
+
+            .service p {
+                font-size: 17px;
+            }
+
+
+            .about {
+                padding: 90px 0;
+            }
+
+            .about-small {
+                font-size: 17px;
+            }
+
+            .about h2 {
+                font-size: 43px;
+
+                margin-bottom: 40px;
+            }
+
+            .about h3 {
+                font-size: 19px;
+            }
+
+            .about p.description {
+                font-size: 17px;
+            }
+
+
+            .quote {
+                min-height: 780px;
+            }
+
+            .quote-content {
+                padding: 55px 0 70px;
+            }
+
+            .quote h2 {
+                font-size: 30px;
+            }
+
+            input,
+            select,
+            textarea {
+                font-size: 16px;
+
+                padding: 17px 18px;
+            }
+
+            textarea {
+                height: 210px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+
+    <header>
+
+        <div class="container header-content">
+
+
+            <a href="#" class="logo">
+
+                <i class="fa-solid fa-industry"></i>
+
+                <span>
+                    Industry
+                </span>
+
+            </a>
+
+
+            <button class="menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+
+            <div class="hero-small-title">
+
+                DON'T LOOK FURTHER, HERE IS THE KEY
+
+            </div>
+
+
+            <h1>
+
+                We’re Industrial<br>
+                solution
+
+            </h1>
+
+
+            <p class="description">
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim. sed do eiusmod tempor
+                incididunt.
+
+            </p>
+
+
+            <a href="#services" class="btn">
+
+                GET STARTED
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <section class="services" id="services">
+
+        <div class="container services-grid">
+
+
+
+
+            <div class="service">
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                </div>
+
+
+                <h2>
+                    Maintenance
+                </h2>
+
+
+                <p>
+
+                    inappropriate behavior is often laughed off as
+                    “boys will be boys,” women face higher conduct
+                    standards especially in the workplace. That’s why.
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <div class="service">
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </div>
+
+
+                <h2>
+                    Residential Service
+                </h2>
+
+
+                <p>
+
+                    inappropriate behavior is often laughed off as
+                    “boys will be boys,” women face higher conduct
+                    standards especially in the workplace. That’s why.
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <div class="service">
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-building"></i>
+
+                </div>
+
+
+                <h2>
+                    Commercial Service
+                </h2>
+
+
+                <p>
+
+                    inappropriate behavior is often laughed off as
+                    “boys will be boys,” women face higher conduct
+                    standards especially in the workplace. That’s why.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <section class="about">
+
+        <div class="container">
+
+
+            <p class="about-small">
+
+                Brand new app to blow your mind
+
+            </p>
+
+
+            <h2>
+
+                We’ve made a life<br>
+                that will change you
+
+            </h2>
+
+
+            <h3>
+
+                We are here to listen from you deliver excellence
+
+            </h3>
+
+
+            <p class="description">
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim.
+
+            </p>
+
+
+            <a href="#quote" class="btn">
+
+                Get Started Now
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         QUOTE
+    ========================== -->
+
+    <section class="quote" id="quote">
+
+        <div class="container quote-content">
+
+
+            <h2>
+
+                Request a Quote
+
+            </h2>
+
+
+            <form>
+
+
+                <select required>
+
+                    <option value="">
+                        Select Service
+                    </option>
+
+                    <option>
+                        Maintenance
+                    </option>
+
+                    <option>
+                        Residential Service
+                    </option>
+
+                    <option>
+                        Commercial Service
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="text"
+                    placeholder="name"
+                    required
+                >
+
+
+                <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    required
+                >
+
+
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+
+                <textarea
+                    placeholder="Message"
+                    required
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+
+                    Request Free Quote
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
